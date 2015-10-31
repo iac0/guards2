@@ -1,0 +1,18 @@
+<div class="container">
+<div class="row pull-right">
+    <button class="btn btn-info ">Stampa questa settimana</button>
+</div>
+</div>
+
+<div class="form-group ">
+    <label for="guardsSelect">Guardie presenti</label>
+
+    <select class="js-example-basic-multiple form-control " id="guardsSelect">
+        <option></option>
+        #foreach( $guard in $guards)
+            <option value="$guard.id">$guard.name $guard.surname</option>
+        #end
+
+    </select>
+</div>
+

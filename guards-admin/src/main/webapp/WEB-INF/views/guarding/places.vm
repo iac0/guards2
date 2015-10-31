@@ -1,0 +1,23 @@
+
+<div id="external-events">
+
+
+
+    <h4>Posti presenti</h4>
+    <input id="searchplaces" type="text" placeholder="Cerca.." class="input-mini"/>
+    #set( $index = 0)
+
+    #foreach( $place in $places )
+        #if ( $index < 10 )
+        <div class="fc-event place ui-draggable ui-draggable-handle "
+             data-name = "$place.name.toLowerCase().replaceAll(" ","")"
+             data-id="$place.id">$place.name<br>$place.timeOfGuarding - $place.timeFinishOfGuarding</div>
+            #else
+                <div class="fc-event place ui-draggable ui-draggable-handle" style=" display: none;"
+                     data-name = "$place.name.toLowerCase().replaceAll(" ","")"
+                     data-id="$place.id">$place.name<br>$place.timeOfGuarding - $place.timeFinishOfGuarding</div>
+        #end
+        #set( $index = $index +1 )
+    #end
+
+</div>

@@ -1,0 +1,53 @@
+#parse("shared/framework.vm")
+#parse("shared/header.vm")
+
+<!-- Start: Content-Wrapper -->
+<section id="content_wrapper">
+
+    <!-- Start: Topbar -->
+    <header id="topbar">
+        <div class="topbar-left">
+            <ol class="breadcrumb framework-breadcrumbs" id="breadcrumbs">
+                <li class="crumb-active">
+                    <a href="${wwwBase}">guards</a>
+                </li>
+                <li class="crumb-icon">
+                    <a href="${wwwBase}">
+                        <span class="glyphicon glyphicon-home"></span>
+                    </a>
+                </li>
+                <li class="crumb-link">
+                    <a href="${wwwBase}">Home</a>
+                </li>
+                <li class="crumb-trail">#_("label.welcome")</li>
+            </ol>
+        </div>
+        <div class="topbar-right framework-toolbar" id="toolbar"></div>
+    </header>
+    <!-- End: Topbar -->
+
+    <!-- Begin: Content -->
+    <section id="spa-container" class="animated fadeIn">
+        <div>
+                <div class="col-lg-2">
+                    <div id='external-events'>
+                        #parse("/guarding/places.vm")
+
+                    </div>
+                </div>
+                <div class="col-lg-10">
+                    #parse("/guarding/guards.vm")
+                    #parse("/guarding/calendar.vm")
+                </div>
+
+        </div>
+
+
+    </section>
+
+</section>
+<!-- End: Content -->
+
+</section>
+
+#parse("/shared/footer.vm")

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="applica.guards.domain.model.Guarding" table="guardings" >
+		<id name="id" type="long">
+			<generator class="native" />
+		</id>
+		<many-to-one name="place" class="applica.guards.domain.model.Place" column="placeId" lazy="false" />
+		<many-to-one name="guard" class="applica.guards.domain.model.Guard" column="guardId" lazy="false" />
+		<property name="watching" />
+		<property name="watchingEnd" />
+	</class>
+</hibernate-mapping>

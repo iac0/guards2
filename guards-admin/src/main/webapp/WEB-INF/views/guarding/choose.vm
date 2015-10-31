@@ -1,0 +1,23 @@
+#parse("shared/framework.vm")
+#parse("shared/header.vm")
+
+<!-- Start: Content-Wrapper -->
+<section id="content_wrapper">
+
+
+
+    <!-- Begin: Content -->
+    <section id="spa-container" class="animated fadeIn">
+        <div>
+
+        </div>
+
+
+    </section>
+
+</section>
+<!-- End: Content -->
+
+</section>
+
+#parse("/shared/footer.vm")
