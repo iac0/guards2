@@ -1,0 +1,21 @@
+<applica>
+    <appname>guards</appname>
+    <archetype>webapp-hibernate</archetype>
+    <webapps>
+        <webapp name="guards-admin">
+            <mappings>
+                <includes>
+                    <include>guards-domain</include>
+                </includes>
+            </mappings>
+        </webapp>
+
+        <webapp name="guards-frontend">
+            <mappings>
+                <includes>
+                    <include>guards-domain</include>
+                </includes>
+            </mappings>
+        </webapp>
+    </webapps>
+</applica>
